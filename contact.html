@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOZE TRAVEL AND TOURS</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+
+    <!-- BANNER -->
+    <section id="banner">
+        <div class ="navbar">
+            <img src="DOZE LOGO.png" alt="logo" class="logo">
+            <navlist id="navlinks">
+                <img src="close.png" alt="" class="menubar" onclick="hideMenu()">
+                <ul class="navitem">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="index.html">SERVICES</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </navlist>
+            <img src="menu.png" alt="" class="menubar" onclick="showMenu()">
+        </div>
+
+        <div class="bannercontent">
+                <h1>CONTACT </h1>
+        </div>
+    </section>
+
+
+    <section id="noteabout">
+        <div class="infobox">
+                <img src="add.png" alt="imgs" class="infoimg">
+            <h2>1, Beckley Estate, U-turn B/Stop, Lagos Abeokuta Expressway, Abule-Egba, Lagos, Nigeria.</h2>
+        </div>
+
+        <div class="infobox">
+            <img src="phone.png" alt="imgs" class="infoimg1">
+        <h2>+234 703 295 8039, 
+            <br> +234 901 308 4026</h2>
+        </div>
+
+        <div class="infobox">
+            <img src="mail.png" alt="imgs" class="infoimg1">
+        <h2>info@dozetravelandtours.com <br>kolulade@dozetravelandtours.com</h2>
+        </div>
+
+    </section>
+
+    <section id="addressframe">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15851.368498458125!2d3.2987449!3d6.6664776!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9715f094648d%3A0x962916a38b9e7144!2sDoze%20travel%20and%20tours%20limited!5e0!3m2!1sen!2sng!4v1702737339502!5m2!1sen!2sng" 
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+
+
+
+    <section id="footerpart">
+        <footer class="footer">
+            <div class="row">
+                <div class="footer-col">
+                    <img src="DOZE LOGO.png" alt="logo" class="logo1">
+                    <h3 id="textdoz">DOZE TRAVEL & TOURS</h3>
+                    <p id="text"><span class="material-symbols-outlined" id="col">location_on</span>1, Beckley Estate, U-turn B/Stop,</p>
+                        <p class="shift">Lagos Abeokuta Expressway, Abule-Egba, Lagos, Nigeria.</p>
+                    <p id="text"><span class="material-symbols-outlined" id="col">call</span>+234 703 295 8039</p>
+                    <p class="shift">+234 901 308 4026</p>
+                    <p id="text"><span class="material-symbols-outlined" id="col">mail</span>info@dozetravelandtours.com</p>
+                    <p class="shift">kolulade@dozetravelandtours.com</p>     
+                </div>
+                
+
+                <div class="footer-col">
+                    <h3>QUICK LINKS</h3>
+                    <div class="quicklinks">
+                    <p><a href="index.html">HOME</a></p> <br>
+                    <p><a href="about.html">ABOUT</a></p><br>
+                    <p><a href="index.html">SERVICES</a></p><br>
+                    <p><a href="#">CONTACT</a></p><br>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>SOCIAL MEDIA LINKS</h3>
+                    <div class="linkimages">
+                        <a href="https://www.instagram.com/dozetravelsandtours/"><img src="instagram logo.png" alt="instagram" class="linkimg"></a>
+                        <a href="https://wa.me/message/6OUF6X7CVL63B1"><img src="whatsapp logo.png" alt="whatsapp" class="linkimg"></a>
+                        <a href="https://m.facebook.com/p/doze_travels-100070040596514/"><img src="facebook logo.png" alt="facebook" class="linkimg"></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                        <div class="box">
+                            <form>
+                            <input type="email" class="input" placeholder="Enter your Email" id="input">
+                            <button type="button" class="submitbtn" onclick="accept()">SUBMIT</button>
+                            <div id="acceptnote"></div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+</section>
+
+<section id="copyright">
+    <h4>&copy; 2023 DOZE TRAVEL AND TOURS</h4>
+</section>
+    
+
+
+<script>
+
+
+    function accept(){
+        var success = document.getElementById("acceptnote");
+        var inputText = document.getElementById("input").value;
+
+        if (inputText="@"){
+            success.innerHTML="Successfully Subscribed!"
+        }
+        else{
+            success.innerHTML="Input your email!"
+        }
+    }
+
+<!-- SCRIPT FOR CLOSE AND OPEN MENU-->
+
+    var navlinks = document.getElementById("navlinks");
+    
+    function showMenu(){
+        navlinks.style.right = "0";
+
+    }
+    function hideMenu(){
+        navlinks.style.right = "-250px";
+    }
+
+// onscroll
+
+    document.addEventListener('scroll',()=>{
+        const nav = document.querySelector('.navbar');
+
+        if(window.scrollY > 0){
+            nav.classList.add('scrolled');
+        }
+        else{
+            nav.classList.remove('scrolled');
+        }
+    });
+
+
+</script>
+
+
+</body>
+</html>
